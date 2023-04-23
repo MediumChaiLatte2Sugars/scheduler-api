@@ -12,6 +12,12 @@ Create a database with the command `CREATE DATABASE scheduler_development;`.
 
 Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration. The `node-postgres` library uses these environment variables by default.
 
+For the testing database:
+
+Create a database with the command `CREATE DATABASE scheduler_test;`.
+
+Copy the `.env.example` file to `.env.test` and fill in the necessary PostgreSQL configuration. The `node-postgres` library uses these environment variables by default.
+
 ```
 PGHOST=localhost
 PGUSER=development
@@ -41,6 +47,11 @@ npm start
 Running the server so it returns an error when saving/deleting for testing the client's error handling capabilities
 ```sh
 npm run error
+```
+
+Running the server for testing purposes (smaller subset of data to pass testing requirements)
+```sh
+npm run test:server
 ```
 
 ## Api
